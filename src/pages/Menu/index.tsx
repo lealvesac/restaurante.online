@@ -6,6 +6,13 @@ function Menu() {
     <main>
       <nav className={styles.menu}>
         <Logo />
+        <nav>
+          <header className={styles.header}>
+            <div className={styles.header__text}>
+              A melhor refeição da região.
+            </div>
+          </header>
+        </nav>
       </nav>
     </main>
   );
