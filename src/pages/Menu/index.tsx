@@ -4,12 +4,14 @@ import Search from "./Search";
 import { useState } from "react";
 import Filters from "./Filters";
 import Order from "./Order";
+import Itens from "./Itens";
 
 export default function Menu() {
 
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<number | null>(null);
   const [order, setOrder] = useState("");
+  
   return (
     <main>
       <nav className={styles.bannerMenu}>
@@ -25,6 +27,7 @@ export default function Menu() {
           <Filters filter={filter} setFilter={setFilter}/>
           <Order order={order} setOrder={setOrder} />
         </div>
+        <Itens search={search} filter={filter} order={order} />
       </section>
     </main>
   );
