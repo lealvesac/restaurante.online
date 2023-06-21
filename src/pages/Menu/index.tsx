@@ -6,8 +6,10 @@ import Filters from "./Filters";
 import Order from "./Order";
 
 export default function Menu() {
+
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<number | null>(null);
+  const [order, setOrder] = useState("");
   return (
     <main>
       <nav className={styles.bannerMenu}>
@@ -21,7 +23,7 @@ export default function Menu() {
         <Search search={search} setSearch={setSearch} />
         <div className={styles.menu__filters}>
           <Filters filter={filter} setFilter={setFilter}/>
-          <Order />
+          <Order order={order} setOrder={setOrder} />
         </div>
       </section>
     </main>
