@@ -1,4 +1,4 @@
-import menu from "./itens.json";
+import menu from "data/menu.json";
 import Item from "./item";
 import styles from "./Itens.module.scss";
 import { useEffect, useState } from "react";
@@ -27,17 +27,17 @@ export default function Itens(itens: iTens) {
 
   function ordering(newList: typeof menu) {
     switch (order) {
-      case "porcao":
-        return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
+    case "porcao":
+      return newList.sort((a, b) => (a.size > b.size ? 1 : -1));
 
-      case "qtd_pessoas":
-        return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
+    case "qtd_pessoas":
+      return newList.sort((a, b) => (a.serving > b.serving ? 1 : -1));
 
-      case "preco":
-        return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
+    case "preco":
+      return newList.sort((a, b) => (a.price > b.price ? 1 : -1));
 
-      default:
-        return newList;
+    default:
+      return newList;
     }
   }
 

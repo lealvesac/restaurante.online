@@ -1,5 +1,5 @@
 import styles from "./Item.module.scss";
-import menu from "../itens.json";
+import menu from "data/menu.json";
 import classNames from "classnames";
 
 type iItem = (typeof menu)[0];
