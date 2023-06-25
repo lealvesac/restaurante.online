@@ -2,7 +2,6 @@ import styles from "./DefaultPage.module.scss";
 import { Outlet } from "react-router-dom";
 import stylesTheme from "styles/Theme.module.scss";
 
-
 export default function DefaultPage() {
   return (
     <>
